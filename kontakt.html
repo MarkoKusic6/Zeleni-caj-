@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kontakt | Zeleni čaj</title>
+<meta name="description" content="Javite se Zelenom čaju.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="zaglavlje">
+<div class="okvir zaglavlje-red">
+<a href="index.html" class="logo"><img src="img/logo-mali.png" alt="Zeleni čaj – početna"></a>
+<button class="meni-dugme" aria-expanded="false" aria-controls="meni">Meni</button>
+<nav class="meni" id="meni"><a href="index.html">Početna</a><a href="o-nama.html">O nama</a><a href="kontakt.html" aria-current="page">Kontakt</a></nav>
+</div>
+</header>
+<main>
+<section class="okvir uvod">
+<h1>Kontakt</h1>
+<p>Imate pitanje ili predlog? Javite nam se.</p>
+</section>
+
+<section class="sekcija">
+<div class="okvir kontakt">
+<div class="podaci">
+<p><strong>E-pošta</strong>info@zelenicaj.rs</p>
+<p><strong>Telefon</strong>+381 60 123 4567</p>
+<p><strong>Radno vreme</strong>Ponedeljak–petak, 9–17h</p>
+<img src="img/nazdravljanje.jpg" alt="Dve čaše matche u nazdravljanju">
+</div>
+<form id="forma">
+<label>Ime<input type="text" name="ime" required></label>
+<label>E-pošta<input type="email" name="email" required></label>
+<label>Poruka<textarea name="poruka" required></textarea></label>
+<button class="dugme" type="submit">Pošalji poruku</button>
+<p id="status" role="status"></p>
+</form>
+</div>
+</section>
+</main>
+<footer class="podnozje">
+<div class="okvir">
+<div class="podnozje-red">
+<img src="img/logo-mali.png" alt="Zeleni čaj">
+<nav><a href="index.html">Početna</a><a href="o-nama.html">O nama</a><a href="kontakt.html">Kontakt</a></nav>
+</div>
+<small>© 2026 Zeleni čaj. Prirodan i osvežavajući.</small>
+</div>
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>
