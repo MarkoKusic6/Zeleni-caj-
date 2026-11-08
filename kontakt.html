@@ -127,6 +127,94 @@ socialToggle.addEventListener("click", function() {
 });
 </script>
 
+
+  
+<!-- FLOATING LIKE BUTTON -->
+
+<div id="floating-like">
+    <button id="like-button" aria-label="Lajkuj sajt">
+        <span id="like-heart">♡</span>
+        <span id="like-count">0</span>
+    </button>
+</div>
+
+<style>
+#floating-like {
+    position: fixed;
+    right: 25px;
+    bottom: 95px;
+    z-index: 99999;
+}
+
+#like-button {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 50px;
+    background: #244b36;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: 0.3s ease;
+}
+
+#like-heart {
+    font-size: 25px;
+    line-height: 1;
+}
+
+#like-button:hover {
+    transform: translateY(-4px);
+    background: #527b5d;
+}
+
+#like-button.liked {
+    background: #527b5d;
+}
+
+#like-button.liked #like-heart {
+    color: #ff6b81;
+}
+
+@media (max-width: 600px) {
+    #floating-like {
+        right: 15px;
+        bottom: 85px;
+    }
+}
+</style>
+
+<script>
+const likeButton = document.getElementById("like-button");
+const likeHeart = document.getElementById("like-heart");
+const likeCount = document.getElementById("like-count");
+
+let liked = false;
+let count = 0;
+
+likeButton.addEventListener("click", function() {
+    liked = !liked;
+
+    if (liked) {
+        count++;
+        likeHeart.textContent = "♥";
+        likeButton.classList.add("liked");
+    } else {
+        count--;
+        likeHeart.textContent = "♡";
+        likeButton.classList.remove("liked");
+    }
+
+    likeCount.textContent = count;
+});
+</script>
+
+  
+
   
 <section class="sekcija">
 <div class="okvir kontakt">
